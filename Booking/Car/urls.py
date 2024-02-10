@@ -1,5 +1,13 @@
 from django.urls import path
 from .views import *
+
+
 urlpatterns = [
     path("", homepage, name=""),
+    path("all-show/", allshow, name="all-show"),
+    path("drop-search/", drop_search, name="drop-search"),
+    path("map-single-detail/", map_single_detail, name="map-single-detail" ),
+    path("product-details/", product_details, name="product-details"),
+    path("book-now", book_now, name="book-now"),
+    path("payment-done", payment_done, name="payment-done"),
 ]
