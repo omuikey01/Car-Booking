@@ -4,6 +4,8 @@
     box-sizing: border-box;
     overflow-x: hidden;
     text-decoration: none;
+    font-weight: bold; 
+    font-family: 'Courier New', Courier, monospace; 
 }
 .flex {
     display: flex;
