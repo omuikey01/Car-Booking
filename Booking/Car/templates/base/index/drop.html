@@ -1,7 +1,56 @@
+{% load static %}
 <section>
-  <div class="drop-component" >
-    <h1>Drop Data</h1>
-    
-    <a href="{% url 'all-show' %}"> <button> Drop </button> </a>
+  <div class="drop-component">
+    <div class="drop-content">
+      <div>
+        <h1 class="text-center">Drop Data</h1>
+      </div>
+      <div class="drop-drop flex">
+        <div class="drop-card">
+          <h1>Brand</h1>
+          <div class="drop-card-image">
+            <img src="{% static 'images/cab1.webp' %}" alt="Brand" />
+          </div>
+          <div>
+            <select name="">
+              <option value="tata">Tata</option>
+              <option value="mahindra">Mahindra</option>
+              <option value="thaar">Thaar</option>
+            </select>
+          </div>
+        </div>
+        <div class="drop-card">
+          <h1>Color</h1>
+          <div class="drop-card-image">
+            <img src="{% static 'images/cab2.webp' %}" alt="Color" />
+          </div>
+          <div>
+            <select name="">
+              <option value="red">Red</option>
+              <option value="orange">Orange</option>
+              <option value="pink">Pink</option>
+            </select>
+          </div>
+        </div>
+        <div class="drop-card">
+          <h1>Price per Km</h1>
+          <div class="drop-card-image">
+            <img src="{% static 'images/cab3.webp' %}" alt="price" />
+          </div>
+          <div>
+            <select name="">
+              <option value="10">10</option>
+              <option value="12">12</option>
+              <option value="15">15</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text-center">
+          <a href="{% url 'all-show' %}"><button>Drop</button></a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

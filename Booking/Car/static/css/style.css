@@ -9,7 +9,9 @@
     display: flex;
     flex-wrap: wrap;
 }
-
+.text-center{
+    text-align: center;
+}
 button {
     padding: 5px 10px;
     width: 100px;
@@ -22,12 +24,16 @@ label {
     margin: 5px 0;
 }
 
-input {
+input, select {
+    width: 250px; 
     padding: 10px;
     font-size: 15px;
     outline: none;
     background-color: transparent;
     border: 1px solid;
+}
+select {
+    width: 200px;
 }
 
 textarea{

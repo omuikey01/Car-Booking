@@ -1,4 +1,23 @@
 .drop-component {
-    background-color: orange;   
+    background-color: orange; 
+    padding: 20px 0;
 }
 
+.drop-drop {
+    justify-content: space-around;
+}
+.drop-drop .drop-card {
+    width: 250px;
+    margin: 20px 0;
+}
+
+.drop-card-image {
+    width: 200px;
+    height: 140px;
+    margin: 10px 0;
+}
+
+.drop-card-image img {
+    width: 90%;
+    border-radius: 10px;
+}
