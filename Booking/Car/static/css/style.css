@@ -16,3 +16,24 @@ button {
     border: 1px solid;
     font-size: 18px;
 }
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+input {
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid;
+}
+
+textarea{
+    padding:10px;
+    font-size: 15px;
+    resize: none;
+    background-color: transparent;
+
+}
