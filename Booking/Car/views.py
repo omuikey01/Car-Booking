@@ -4,6 +4,8 @@ from django.shortcuts import render
 
 def homepage(request):
     return render(request, "base/index/index.html")
+def about(request):
+    return render(request, "base/index/about/about.html")
 
 def allshow(request):
     return render (request, "base/pages/all_data.html")
@@ -23,3 +25,6 @@ def book_now(request):
 
 def payment_done(request):
     return render(request, "base/pages/message.html")
+
+def auth(request):
+    return render(request, "base/index/auth.html")

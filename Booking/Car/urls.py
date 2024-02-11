@@ -10,4 +10,6 @@ urlpatterns = [
     path("product-details/", product_details, name="product-details"),
     path("book-now", book_now, name="book-now"),
     path("payment-done", payment_done, name="payment-done"),
+    path("auth/", auth, name="auth"),
+    path("about/", about, name="about"),
 ]

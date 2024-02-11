@@ -1,5 +1,24 @@
+{% load static %}
 <section>
-  <div class="nav-component" >
-    <h1>Nav background color is red </h1>
+  <div class="nav-component flex ">
+    <div class="nav-left" >
+      <img src="" alt="Logo" />
+    </div>
+    <div class="nav-right flex " >
+      <div >
+        <a href="{% url '' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="#footer">Contact</a>
+      </div>
+      <div class="nav-right-btns" >
+        <a href="{% url 'auth' %}"><button>Signin</button></a>
+        <a href="{% url 'auth' %}"><button>Signup</button></a>
+        {% comment %} <button>Signup</button> {% endcomment %}
+      </div>
+      
+    </div>
+    <div class="nav-menu" >
+      <img src="{% static 'images/nav-menu.png' %}" alt="Menu">
+    </div>
   </div>
 </section>

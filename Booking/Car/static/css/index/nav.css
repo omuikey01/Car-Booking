@@ -1,3 +1,33 @@
 .nav-component {
     background-color: red;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-right {
+    align-items: center;
+}
+.nav-right-btns {
+    margin-left: 100px;
+}
+
+.nav-menu {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .nav-right-btns {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-menu {
+        display: block;
+    }
+    .nav-right {
+        display: none;
+    }
+    .nav-right-btns {
+        margin-left: 0px;
+    }
 }
