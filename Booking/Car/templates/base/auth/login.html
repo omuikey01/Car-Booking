@@ -1,2 +1,39 @@
 
-<h1> Login Page </h1>
+  <section>
+  <div class="form-container">
+    <form class="signup" action="#">
+      <h2>SignIn</h2>
+        <div class="input-field">
+        <input type="text" name="signin-user_email" value="" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" name="signin-user_pass" value="" required>
+        <label>Enter your password</label>
+      </div>
+      <div class="user-box">
+        <div class="user-option">
+          <div class="user">
+            <input type="radio" id="check-client" name="user" checked />
+            <label for="check-client">Client</label>
+          </div>
+          <div class="user">
+            <input type="radio" id="check-dealer" name="user" />
+            <label for="check-dealer">Dealer</label>
+          </div>
+        </div>
+      </div>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Remember me</p>
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit">Sign In</button>
+      <div class="register">
+        <p>Don't have an account? <a href="#">SignUp</a></p>
+      </div>
+    </form>
+  </div>
+  </section>

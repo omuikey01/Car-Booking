@@ -1,13 +1,51 @@
-<section>
-    <form action="">
-        <h1> Registration </h1>
-        <div>
-            <label for="">Full Name </label>
-            <input type="text" name="fullname" >
+
+  <section>
+  <div class="form-container">
+    <form class="signup" action="#">
+      <h2>SignUp</h2>
+
+      <div class="input-field">
+        <input type="text" name="signup-user_name" value="" required>
+        <label>Enter your name</label>
+      </div>
+      <div class="input-field">
+        <input type="email" name="signup-user_email" value="" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="tel" name="signup-user_contact" value="" required>
+        <label>Enter your contact</label>
+      </div>
+
+      <div class="user-box">
+        <h3>Select user Type:</h3>
+        <div class="user-option">
+          <div class="user">
+            <input type="radio" id="check-client" name="user" checked />
+            <label for="check-client">Client</label>
+          </div>
+          <div class="user">
+            <input type="radio" id="check-dealer" name="user" />
+            <label for="check-dealer">Dealer</label>
+          </div>
         </div>
-        <div>
-            <label for="">Email </label>
-            <input type="email" name="fullname" >
-        </div>
+      </div>
+
+      <div class="input-field">
+        <input type="password" name="signup-user_pass" value="" required>
+        <label>Enter your password</label>
+      </div>
+      <div class="input-field">
+        <input type="password" name="signup-user_confirmpass" value="" required>
+        <label>Re-enter your password</label>
+      </div>
+
+
+
+      <button type="submit">Sign Up</button>
+      <div class="register">
+        <p>Do you have an account? <a href="#">signIn</a></p>
+      </div>
     </form>
-</section>
+  </div>
+  </section>

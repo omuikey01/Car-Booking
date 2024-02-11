@@ -1,4 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
 .nav-auth{
-    background-color: black;
-    color: white;
+  width: 60vw;
+  margin: auto;
+}
+
+.form-container {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  /* backdrop-filter: blur(9px); */
+  /* -webkit-backdrop-filter: blur(9px); */
+  /* background-color:rgb(41, 37, 37); */
+  background-color: #000;
+}
+
+.form-container .signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container .signup h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.form-container .signup .input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+
+.form-container .signup .input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.form-container .signup .input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.form-container .signup .input-field input:focus~label,
+.form-container .signup .input-field input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+.user-box {
+  margin-top: 20px;
+}
+
+.user-box h3 {
+  color:#fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-container .signup :where(.user-option, .user) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.form-container .signup .user {
+  column-gap: 5px;
+}
+
+.form-container .signup .user input {
+  accent-color: rgb(130, 106, 251);
+}
+
+.form-container .signup :where(.user input, .user label) {
+  cursor: pointer;
+}
+
+.user label {
+  /* color: #707070; */
+  color: #fff;
+}
+
+
+.form-container .signup a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.form-container .signup a:hover {
+  text-decoration: underline;
+}
+
+.form-container button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  margin-top: 15px;
+  padding: 12px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  margin: auto;
+}
+
+.form-container button:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.form-container .signup .register {
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.form-container .signup .forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #fff;
+}
+
+#remember {
+  accent-color: #fff;
+}
+
+.form-container .signup .forget label {
+  display: flex;
+  align-items: center;
+}
+
+.form-container .signup .forget label p {
+  margin-left: 8px;
 }
