@@ -1,6 +1,49 @@
-<section>
-  <div class="search-component" >
-    <h1>Search Data</h1>
-    <a href="{% url 'all-show' %}"> <button>Search</button> </a>
-  </div>
-</section>
+    <section>
+      <div class="search-bar-ride">
+      <h2>Ready for Ride</h2>
+      <form action="#">
+
+      
+
+        <div class="input-box">
+          <label>Current Location</label>
+          <input type="search" name="pass-curr_loc" value="" placeholder="Enter Current location" required />
+        </div>
+
+        <div class="input-box">
+          <label>Destination</label>
+          <input type="text" name="pass-last_loc" value="" placeholder="Enter your Destination" required />
+        </div>
+
+        <div class="your-way">
+          <div class="way-option">
+            <div class="way">
+              <input style="width: 20px;" type="radio" id="check-one_way" name="way" checked />
+              <label for="check-one_way">One way</label>
+            </div>
+            <div class="way">
+              <input style="width: 20px;" type="radio" id="check-two_way" name="way" />
+              <label for="check-two_way">Two way</label>
+            </div>
+          </div>
+        </div>
+
+       <div class="ride-time">
+
+         <div class="input-box">
+           <label>Pick-up Time</label>
+           <input type="time" name="pass-pick_time" value=""  required />
+          </div>
+          
+          <div class="input-box">
+            <label>Drop-off Time</label>
+            <input type="time" name="pass-drop_time" value="" placeholder="Enter your password" required />
+          </div>
+        
+        </div>
+
+        <a href="{% url 'all-show' %}"> <button>Book ride</button> </a>
+      </form>
+      </div>
+    </section>
+

@@ -3,10 +3,12 @@
 .nav-auth{
   width: 60vw;
   margin: auto;
+  /* background-color: #000; */
 }
 
 .form-container {
-  width: 400px;
+  max-width: 600px;
+  margin: auto  ;
   border-radius: 8px;
   padding: 30px;
   text-align: center;
