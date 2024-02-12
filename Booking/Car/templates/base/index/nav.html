@@ -1,22 +1,24 @@
 {% load static %}
 <section>
-  <div class="nav-component flex ">
-    <div class="nav-left" >
-      <img src="" alt="Logo" />
+  <div class="nav-component flex">
+    <input type="checkbox" id="check" />
+    
+    <div class="nav-left">
+      <img src="{% static 'images/logo/nav_logo.png' %}" alt="Logo" />
     </div>
-    <div class="nav-right flex " >
-      <div >
+    <div class="nav-right flex">
+      <div>
         <a href="{% url '' %}">Home</a>
         <a href="{% url 'about' %}">About</a>
         <a href="#footer">Contact</a>
       </div>
-      <div class="nav-right-btns" >
+      <div class="nav-right-btns">
         <a href="{% url 'auth' %}"><button>Signin</button></a>
         <a href="{% url 'auth' %}"><button>Signup</button></a>
       </div>
     </div>
-    <div class="nav-menu" >
-      <img src="{% static 'images/nav-menu.png' %}" alt="Menu">
-    </div>
+    <label for="check" class="nav-menu">
+      <img src="{% static 'images/nav-menu.png' %}" alt="Menu" />
+    </label>
   </div>
 </section>

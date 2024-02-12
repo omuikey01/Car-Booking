@@ -1,16 +1,47 @@
 .nav-component {
+    width: 100vw;
     background-color: red;
     justify-content: space-around;
     align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 2;
 }
+
+.nav-component .nav-left img{
+    width: 96px;
+}
+
 .nav-right {
     align-items: center;
 }
+
+.nav-right div a{
+    padding: 0 5px;
+    font-size: 18px;
+    color: white;
+}
+
 .nav-right-btns {
     margin-left: 100px;
 }
 
+.nav-right-btns a button{
+    width: 100px;
+    height: 35px;
+    font-weight: 500;
+    background: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s ease; 
+}
+
 .nav-menu {
+    display: none;
+}
+
+#check{
     display: none;
 }
 
@@ -20,14 +51,38 @@
     }
 }
 
-@media (max-width: 500px) {
+
+@media (max-width: 560px) {
     .nav-menu {
         display: block;
     }
-    .nav-right {
-        display: none;
+
+    .nav-component .nav-right {
+        position: fixed;
+        width: 40%;
+        height: 100%;
+        background: #2c3e50;
+        top: 70px;
+        right: -100%;
+        text-align: center;
+        transition: all .9s;
     }
+
+    .nav-right, div a{
+        /* display: none; */
+        display: block;
+    }
+
+    .nav-right div a, .nav-right .nav-right-btns{
+        margin-top: 35px;
+    }
+   
     .nav-right-btns {
         margin-left: 0px;
+    }
+
+
+    #check:checked ~ .nav-right{
+        right: 0;
     }
 }
