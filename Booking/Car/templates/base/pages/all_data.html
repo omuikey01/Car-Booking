@@ -3,8 +3,24 @@
 {% block Data %}
   <section>
     <div>
-      <h1>All Searched data</h1>
-      <a href="{% url 'product-details' %}"> <button> More Detail </button> </a>
+      <div class="cards ">
+        <h1>All Searched data</h1>
+        <div class="card flex">
+          <div class="car-images">images</div>
+          <div class="car-detail">car detail</div>
+          <div class="car-owner_detail">owner detail</div>
+          <a href="{% url 'product-details' %}"> <button> More Detail </button> </a>
+
+        </div>
+
+        <div class="card flex">
+          <div class="car-owner_detail">owner detail</div>
+          <div class="car-images">car images</div>
+          <div class="car-detail">car detail</div>
+          <a href="{% url 'product-details' %}"> <button> More Detail </button> </a>
+        </div>
+
+      </div>
     </div>
   </section>
 {% endblock %}
