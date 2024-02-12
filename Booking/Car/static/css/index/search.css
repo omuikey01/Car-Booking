@@ -13,8 +13,10 @@
   position: relative;
   max-width: 400px;
   width: 100%;
+  margin-top: 70px;
   /* background: #544296; */
-  background: rgb(130, 106, 251);
+  /* background: rgb(130, 106, 251); */
+  background-image: url('static/images/search_car.jpg');
 
   padding: 25px;
   border-radius: 8px;
