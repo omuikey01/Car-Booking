@@ -1,9 +1,7 @@
-
-  <section>
+<section>
   <div class="form-container">
     <form class="signup" action="#">
       <h2>SignUp</h2>
-
       <div class="input-field">
         <input type="text" name="signup-user_name" value="" required>
         <label>Enter your name</label>
@@ -39,13 +37,10 @@
         <input type="password" name="signup-user_confirmpass" value="" required>
         <label>Re-enter your password</label>
       </div>
-
-
-
       <button style="width: 300px;" type="submit">Sign Up</button>
       <div class="register">
-        <p>Do you have an account? <a href="#">signIn</a></p>
+        <p>Do you have an account? <a href="{% url 'auth_form_in' %}">signIn</a></p>
       </div>
     </form>
   </div>
-  </section>
+</section>

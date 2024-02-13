@@ -26,5 +26,17 @@ def book_now(request):
 def payment_done(request):
     return render(request, "base/pages/message.html")
 
+
 def auth(request):
-    return render(request, "base/index/auth.html")
+    if request.method == 'POST':
+        any_one = request.POST['autu_btn']
+        return render(request, "base/index/auth.html", {"any_one" : any_one})
+    else :
+        return render(request, "base/index/auth.html")
+    
+
+def auth_form_up(request):
+    return render(request, "base/index/auth.html", {"any_one" : "up"})
+
+def auth_form_in(request):
+    return render(request, "base/index/auth.html", {"any_one" : "in"})

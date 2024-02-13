@@ -1,11 +1,15 @@
-{% extends "./base.html" %}
+{% extends './base.html' %}
 
 {% block Data %}
+  <section>
+    <div class="nav-auth">
+      {% if any_one == 'up' %}
+        {% include 'base/auth/registration.html' %}
+      {% else %}
+        {% include 'base/auth/login.html' %}
+      {% endif %}
+        
 
-    <section>
-        <div class="nav-auth flex">
-            {% include 'base/auth/login.html' %}
-            {% include 'base/auth/registration.html' %}
-        </div>
-    </section>    
-{% endblock  %}
+    </div>
+  </section>
+{% endblock %}
