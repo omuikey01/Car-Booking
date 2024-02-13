@@ -1,6 +1,6 @@
 <section>
   <div class="form-container">
-    <form class="signup" action="#">
+    <form class="signup" action="#" action="{% url 'registerform' %}" method="post" >
       <h2>SignUp</h2>
       <div class="input-field">
         <input type="text" name="signup-user_name" value="" required>
@@ -28,7 +28,6 @@
           </div>
         </div>
       </div>
-
       <div class="input-field">
         <input type="password" name="signup-user_pass" value="" required>
         <label>Enter your password</label>
