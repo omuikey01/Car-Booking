@@ -40,3 +40,9 @@ def auth_form_up(request):
 
 def auth_form_in(request):
     return render(request, "base/index/auth.html", {"any_one" : "in"})
+
+
+def registerform(request):
+    if request.method == "POST":
+        pass
+    return render(request, "base/index/auth.html", {"any_one" : "in"})
