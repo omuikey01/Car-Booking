@@ -82,9 +82,8 @@
 }
 
 .search-bar-ride form .input-box label {
-  /* color: #333; */
-  color: white;
 
+  color: #333;
 }
 
 .search-bar-ride form :where(.input-box input) {
@@ -139,3 +138,8 @@
     row-gap: 15px;
   }
 }
+
+
+
+
+

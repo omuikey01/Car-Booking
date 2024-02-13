@@ -13,8 +13,11 @@
         <a href="#footer">Contact</a>
       </div>
       <div class="nav-right-btns">
-        <a href="{% url 'auth' %}"><button>Signin</button></a>
-        <a href="{% url 'auth' %}"><button>Signup</button></a>
+        <form action="{% url 'auth' %}" method="post" >
+          {% csrf_token %}
+          <button name="autu_btn" value="in" >Signin</button>
+         <button name="autu_btn" value="up" >Signup</button>
+        </form>
       </div>
     </div>
     <label for="check" class="nav-menu">
