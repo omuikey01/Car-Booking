@@ -1,26 +1,85 @@
-{% extends '../index/base.html' %}
-
+{% extends '../index/base.html' %} 
+{% load static %}
 {% block Data %}
-  <section>
-    <div>
-      <div class="cards ">
-        <h1>All Searched data</h1>
+<section class="all_data-section">
+  <div>
+    <div class="cards">
+      <div>
         <div class="card flex">
-          <div class="car-images">images</div>
-          <div class="car-detail">car detail</div>
-          <div class="car-owner_detail">owner detail</div>
-          <a href="{% url 'product-details' %}"> <button> More Detail </button> </a>
-
+          <div class="car-images all_data-data-container">
+            <img src="{% static 'images/car1.jpg' %}" alt="" />
+          </div>
+          <div class="car-detail all_data-data-container">
+            <div class="car-detail-input_field">
+              <input type="text" placeholder="Car Name" />
+              <input type="text" placeholder="Car Color" />
+            </div>
+            <div class="car-detail-input_field">
+              <input type="text" placeholder="From" />
+              <input type="text" placeholder="To" />
+            </div>
+            <div class="car-detail-radiobtn flex">
+              <input style="width: 20px;" type="radio" name="car-detail_way" checked />One way
+              <input style="width: 20px;" type="radio" name="car-detail_way" />Two way
+            </div>
+            <div class="car-detail-date_time">
+              <input type="datetime-local" />
+            </div>
+          </div>
+          <div  class="car-owner_detail all_data-data-container flex">
+            <img src="{% static 'images/manprofile.jpeg' %}" alt="" />
+            <div class="desc">
+              <h3>Ram Kumar</h3>
+              <a href="{% url 'product-details' %}">
+                <button>More Detail</button>
+              </a>
+            </div>
+          </div>
         </div>
+        <div style="text-align: center">
+          <button class="bookbtn">Book Now</button>
+        </div>
+      </div>
 
+      <!-- second card -->
+      <div>
         <div class="card flex">
-          <div class="car-owner_detail">owner detail</div>
-          <div class="car-images">car images</div>
-          <div class="car-detail">car detail</div>
-          <a href="{% url 'product-details' %}"> <button> More Detail </button> </a>
-        </div>
+          <div class="car-owner_detail all_data-data-container flex">
+            <img src="{% static 'images/manprofile.jpeg' %}" alt="" />
+            <div class="desc">
+              <h3>Ram Kumar</h3>
+              <a href="{% url 'product-details' %}">
+                <button>More Detail</button>
+              </a>
+            </div>
+          </div>
 
+          <div class="car-detail all_data-data-container">
+            <div class="car-detail-input_field">
+              <input type="text" placeholder="Car Name" />
+              <input type="text" placeholder="Car Color" />
+            </div>
+            <div class="car-detail-input_field">
+              <input type="text" placeholder="From" />
+              <input type="text" placeholder="To" />
+            </div>
+            <div class="car-detail-radiobtn flex">
+              <input style="width: 20px;" type="radio" name="car-detail_oneway" checked />One way
+              <input style="width: 20px;" type="radio" name="car-detail_oneway" />Two way
+            </div>
+            <div class="car-detail-date_time">
+              <input type="datetime-local" />
+            </div>
+          </div>
+          <div class="car-images all_data-data-container">
+            <img src="{% static 'images/car1.jpg' %}" alt="" />
+          </div>
+        </div>
+        <div style="text-align: center">
+          <button class="bookbtn">Book Now</button>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {% endblock %}
