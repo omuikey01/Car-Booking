@@ -76,7 +76,7 @@
 }
 
 .search-bar-ride form .input-box label {
-  /* color: #333; */
+  color: #333;
 }
 
 .search-bar-ride form :where(.input-box input) {
