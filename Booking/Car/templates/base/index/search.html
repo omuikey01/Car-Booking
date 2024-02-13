@@ -1,16 +1,16 @@
     <section class="search-section" >
       <div class="search-bar-ride">
       <h2>Ready for Ride</h2>
-      <form action="#">
+      <form action="{% url 'all-show' %}">
 
         <div class="input-box">
           <label>Current Location</label>
-          <input type="search" name="pass-curr_loc" value="" placeholder="Enter Current location" required />
+          <input type="search" name="pass-curr_loc" value="" placeholder="Enter Current location"  />
         </div>
 
         <div class="input-box">
           <label>Destination</label>
-          <input type="text" name="pass-last_loc" value="" placeholder="Enter your Destination" required />
+          <input type="text" name="pass-last_loc" value="" placeholder="Enter your Destination"  />
         </div>
 
         <div class="your-way">
@@ -30,18 +30,17 @@
 
          <div class="input-box">
            <label>Pick-up Time</label>
-           <input type="time" name="pass-pick_time" value=""  required />
+           <input type="time" name="pass-pick_time" value=""   />
           </div>
           
           <div class="input-box">
             <label>Drop-off Time</label>
-            <input type="time" name="pass-drop_time" value="" placeholder="Enter your password" required />
+            <input type="time" name="pass-drop_time" value="" placeholder="Enter your password"  />
           </div>
-        
         </div>
-
-        <a href="{% url 'all-show' %}"> <button>Book ride</button> </a>
+        <!-- <button>Book ride</button>  -->
       </form>
+      <a href="{% url 'all-show' %}"><button>Book ride</button></a>
       </div>
     </section>
 

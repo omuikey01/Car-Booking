@@ -12,4 +12,6 @@ urlpatterns = [
     path("payment-done", payment_done, name="payment-done"),
     path("auth/", auth, name="auth"),
     path("about/", about, name="about"),
+    path("auth_form_up/", auth_form_up, name="auth_form_up"),
+    path("auth_form_in/", auth_form_in, name="auth_form_in"),
 ]

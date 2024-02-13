@@ -1,9 +1,8 @@
-
-  <section>
+<section>
   <div class="form-container">
     <form class="signup" action="#">
       <h2>SignIn</h2>
-        <div class="input-field">
+      <div class="input-field">
         <input type="text" name="signin-user_email" value="" required>
         <label>Enter your email</label>
       </div>
@@ -30,10 +29,13 @@
         </label>
         <a href="#">Forgot password?</a>
       </div>
-      <button style="width: 300px;"  type="submit">Sign In</button>
+      <button style="width: 300px;" type="submit">Sign In</button>
       <div class="register">
-        <p>Don't have an account? <a href="#">SignUp</a></p>
+
+
+        <p>Do't have account? <a href="{% url 'auth_form_up' %}">signUp</a></p>
+      
       </div>
     </form>
   </div>
-  </section>
+</section>
