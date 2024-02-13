@@ -1,15 +1,27 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('../style.css');
+
+
+.search-section {
+  background-image: url('/static/images/search_car.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+}
+
 .search-bar-ride {
   position: relative;
   max-width: 400px;
   width: 100%;
   margin-top: 70px;
-  /* background: #544296; */
-  /* background: rgb(130, 106, 251); */
-  background-image: url("/Booking/Car/static/images/search_car.jpg") 50% 0 no-repeat fixed;
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: blueviolet;
+  color: #fff;
 }
+
 .search-bar-ride h2 {
   font-size: 1.5rem;
   color: #333;
@@ -25,27 +37,33 @@
 .search-bar-ride form .your-way {
   margin-top: 20px;
 }
+
 .your-way h3 {
   color: #333;
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 8px;
 }
+
 .search-bar-ride form :where(.way-option, .way) {
   display: flex;
   align-items: center;
   column-gap: 50px;
   flex-wrap: wrap;
 }
+
 .search-bar-ride form .way {
   column-gap: 5px;
 }
+
 .search-bar-ride form .way input {
   accent-color: rgb(130, 106, 251);
 }
+
 .search-bar-ride form :where(.way input, .way label) {
   cursor: pointer;
 }
+
 .way label {
   /* color: #707070; */
   color: #333;
@@ -56,16 +74,19 @@
   width: 100%;
   margin-top: 20px;
 }
+
 .search-bar-ride form .input-box label {
-  color: #333;
+  /* color: #333; */
 }
+
 .search-bar-ride form :where(.input-box input) {
   position: relative;
   height: 50px;
   width: 100%;
   outline: none;
   font-size: 1rem;
-  color: #707070;
+  /* color: #707070; */
+  color: #fff;
   margin-top: 8px;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -76,7 +97,7 @@
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-.search-bar-ride form .ride-time{
+.search-bar-ride form .ride-time {
   display: flex;
   gap: 10px;
 }
@@ -95,14 +116,17 @@
   /* background: rgb(130, 106, 251); */
   background: #544296;
 }
+
 .search-bar-ride form button:hover {
   background: rgb(88, 56, 250);
 }
+
 /*Responsive*/
 @media screen and (max-width: 500px) {
-  .search-bar-ride form{
+  .search-bar-ride form {
     flex-wrap: wrap;
   }
+
   .search-bar-ride form :where(.user-option, .user) {
     row-gap: 15px;
   }

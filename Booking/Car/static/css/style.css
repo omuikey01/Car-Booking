@@ -1,17 +1,27 @@
-*{
+:root {
+    /* --whilte : #fff; */
+    --blue: #1e90ff;
+    --white: #ffffff;
+
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
     text-decoration: none;
 }
+
 .flex {
     display: flex;
     flex-wrap: wrap;
 }
-.text-center{
+
+.text-center {
     text-align: center;
 }
+
 button {
     padding: 5px 10px;
     width: 100px;
@@ -24,8 +34,9 @@ label {
     margin: 5px 0;
 }
 
-input, select {
-    width: 250px; 
+input,
+select {
+    width: 250px;
     padding: 10px;
     font-size: 15px;
     outline: none;
@@ -37,8 +48,8 @@ select {
     width: 200px;
 }
 
-textarea{
-    padding:10px;
+textarea {
+    padding: 10px;
     font-size: 15px;
     resize: none;
     background-color: transparent;
