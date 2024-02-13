@@ -1,6 +1,9 @@
 .nav-component {
     width: 100vw;
-    background-color: red;
+    /* background-color: red; */
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
