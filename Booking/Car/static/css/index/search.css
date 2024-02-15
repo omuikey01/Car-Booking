@@ -4,9 +4,11 @@
 
 
 .search-section {
-  background-image: url('/static/images/search_car.jpg');
+  /* background-image: url('/static/images/search_car.jpg'); */
+  background-image: url('/static/images/car-land2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-attachment: fixed; */
   width: 100vw;
 }
 
@@ -83,7 +85,8 @@
 
 .search-bar-ride form .input-box label {
 
-  color: #333;
+  /* color: #333; */
+  color: #fff;
 }
 
 .search-bar-ride form :where(.input-box input) {
