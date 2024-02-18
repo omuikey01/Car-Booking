@@ -1,6 +1,9 @@
 .nav-component {
     width: 100vw;
-    background-color: red;
+    /* background-color: red; */
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
@@ -27,7 +30,7 @@
     margin-left: 100px;
 }
 
-.nav-right-btns a button{
+.nav-right-btns form button{
     width: 100px;
     height: 35px;
     font-weight: 500;

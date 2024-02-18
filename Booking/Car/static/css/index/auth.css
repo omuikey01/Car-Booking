@@ -1,21 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
 
 .nav-auth{
-  width: 60vw;
-  margin: auto;
-  /* background-color: #000; */
+  margin-top: 100px;
+  
 }
 
 .form-container {
-  max-width: 600px;
-  margin: auto  ;
+  width: 400px;
+  margin: auto;
   border-radius: 8px;
   padding: 30px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  /* backdrop-filter: blur(9px); */
-  /* -webkit-backdrop-filter: blur(9px); */
-  /* background-color:rgb(41, 37, 37); */
   background-color: #000;
 }
 
