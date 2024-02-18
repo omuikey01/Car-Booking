@@ -1,9 +1,17 @@
 from django.shortcuts import render
+import datetime
+from datetime import time
+from .models import *
 
 # Create your views here.
 
+loginfailcount = 0
+
+
+
 def homepage(request):
     return render(request, "base/index/index.html")
+
 def about(request):
     return render(request, "base/index/about/about.html")
 
@@ -41,8 +49,73 @@ def auth_form_up(request):
 def auth_form_in(request):
     return render(request, "base/index/auth.html", {"any_one" : "in"})
 
+def forgotpass(request):
+    return render(request, "base/auth/forgetpass.html")   
 
 def registerform(request):
     if request.method == "POST":
-        pass
-    return render(request, "base/index/auth.html", {"any_one" : "in"})
+        name = request.POST['signup-user_name']
+        email = request.POST['signup-user_email']
+        contact = request.POST['signup-user_contact']
+        auto = request.POST['checkbox']
+        password = request.POST['signup-user_pass']
+        confirm = request.POST['signup-user_confirmpass']
+        date = datetime.datetime.now()
+        current_time = date.strftime("%Y-%m-%d, %H:%M:%S")
+
+        if password != confirm:
+            return render(request, "base/index/auth.html", {"any_one" : "up", "error" : "Password and Confirm password not match "})
+        if auto == "Client":
+            try:
+                user = RegisterUser.objects.filter(user_email = email)
+                if user:
+                    return render(request, "base/index/auth.html", {"any_one" : "up", "error" : "Email already exists "})
+                else :
+                    RegisterUser.objects.create(user_name = name,user_email = email, user_contact = contact,user_auth =  auto, user_pass = password,user_join = current_time )
+            except :
+                RegisterUser.objects.create(user_name = name,user_email = email, user_contact = contact,user_auth =  auto, user_pass = password,user_join = current_time )     
+        else :
+            try :
+                user = RegisterUser.objects.filter(dealer_email = email)
+                if user:
+                    return render(request, "base/index/auth.html", {"any_one" : "up", "error" : "Email already exists "})
+                else :
+                    RegisterDealer.objects.create(dealer_name = name,dealer_email = email,dealer_contact = contact, dealer_auth =  auto, dealer_pass = password, dealer_join = current_time )
+            except :
+                RegisterDealer.objects.create(dealer_name = name,dealer_email = email, dealer_contact = contact,dealer_auth = auto, dealer_pass = password, dealer_join = current_time)
+        return render(request, "base/index/auth.html", {"any_one" : "in", "error" : "Now Login"})
+    else :
+        return render(request, "base/index/auth.html", {"any_one" : "in"})
+
+def loginform(request):
+    if request.method == 'POST':
+        email = request.POST['signin-user_email']
+        password = request.POST['signin-user_pass']
+        auto = request.POST['checkbox']
+        if auto == "Client" :
+            if loginfailcount <= 5 :
+                try:
+                    user = RegisterUser.objects.get(user_email = email)
+                    if user.user_email == email and user.user_pass == password :
+                        return render(request, "client/desh.html")
+                    else :
+                        loginfailcount+1
+                        return render(request, "base/index/auth.html", {"any_one" : "in","error" : " Invalid username or password "})
+                except :
+                        return render(request, "base/index/auth.html", {"any_one" : "up","error" : "User have't register please, do it"})
+            else :
+                print(" You have hit more then 5 times please Register your self ")
+                return render(request, "base/index/auth.html", {"any_one" : "up","error" : "You have hit more then 5 times please Register your self"})
+        else :
+            try:
+                user = RegisterDealer.objects.get(dealer_email = email)
+                if user.dealer_email == email and user.dealer_pass == password :
+                    return render(request, "dealer/desh.html")
+                else :
+                    loginfailcount+1
+                    return render(request, "base/index/auth.html", {"any_one" : "in","error" : "Invalid username or password"})
+            except :
+                    return render(request, "base/index/auth.html", {"any_one" : "up","error" : "User have't register please, do it"})
+    else :
+        return render(request, "base/index/auth.html", {"any_one" : "in"})
+

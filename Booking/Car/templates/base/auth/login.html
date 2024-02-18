@@ -1,7 +1,9 @@
 <section>
   <div class="form-container">
-    <form class="signup" action="#">
+    <form class="signup" action="{% url 'loginform' %}" method="post" >
+      {% csrf_token %}
       <h2>SignIn</h2>
+      <h1 style="color : white;" > {{error}} </h1> 
       <div class="input-field">
         <input type="text" name="signin-user_email" value="" required>
         <label>Enter your email</label>
@@ -13,29 +15,23 @@
       <div class="user-box">
         <div class="user-option">
           <div class="user">
-            <input style="width: 20px;" type="radio" id="check-client" name="user" checked />
+            <input style="width: 20px;" type="radio" id="check-client" name="checkbox" value="Client" checked />
             <label for="check-client">Client</label>
           </div>
           <div class="user">
-            <input style="width: 20px;" type="radio" id="check-dealer" name="user" />
+            <input style="width: 20px;" type="radio" id="check-dealer" name="checkbox" value="Dealer" />
             <label for="check-dealer">Dealer</label>
           </div>
         </div>
       </div>
       <div class="forget">
-        <label for="remember">
-          <input style="width: 20px;" type="checkbox" id="remember">
-          <p>Remember me</p>
-        </label>
-        <a href="#">Forgot password?</a>
+        <a href="{% url 'forgotpass' %}">Forgot password?</a>
       </div>
       <button style="width: 300px;" type="submit">Sign In</button>
-      <div class="register">
-
-
-        <p>Do't have account? <a href="{% url 'auth_form_up' %}">signUp</a></p>
-      
-      </div>
     </form>
+    <div class="register" style="margin : 10px 0;">
+      <p style="color : white;">Do't have account? <a style="color : white;" href="{% url 'auth_form_up' %}">signUp</a>
+      </p>
+    </div>
   </div>
 </section>

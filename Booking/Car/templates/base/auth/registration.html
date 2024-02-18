@@ -1,17 +1,19 @@
 <section>
   <div class="form-container">
-    <form class="signup" action="#" action="{% url 'registerform' %}" method="post" >
+    <form class="signup" action="{% url 'registerform' %}" method="post" >
+      {% csrf_token %}
       <h2>SignUp</h2>
+      <h1 style="color : white;"> {{error}}  </h1>
       <div class="input-field">
-        <input type="text" name="signup-user_name" value="" required>
+        <input type="text" name="signup-user_name" required>
         <label>Enter your name</label>
       </div>
       <div class="input-field">
-        <input type="email" name="signup-user_email" value="" required>
+        <input type="email" name="signup-user_email" required>
         <label>Enter your email</label>
       </div>
       <div class="input-field">
-        <input type="tel" name="signup-user_contact" value="" required>
+        <input type="tel" name="signup-user_contact" required>
         <label>Enter your contact</label>
       </div>
 
@@ -19,27 +21,27 @@
         <h3>Select user Type:</h3>
         <div class="user-option">
           <div class="user">
-            <input style="width: 20px;" type="radio" id="signup-check-client" name="user" checked />
+            <input style="width: 20px;" type="radio" id="signup-check-client" name="checkbox" value="Client" checked />
             <label for="signup-check-client">Client</label>
           </div>
           <div class="user">
-            <input style="width: 20px;" type="radio" id="signup-check-dealer" name="user" />
+            <input style="width: 20px;" type="radio" id="signup-check-dealer" name="checkbox" value="Dealer" />
             <label for="signup-check-dealer">Dealer</label>
           </div>
         </div>
       </div>
       <div class="input-field">
-        <input type="password" name="signup-user_pass" value="" required>
+        <input type="password" name="signup-user_pass" required>
         <label>Enter your password</label>
       </div>
       <div class="input-field">
-        <input type="password" name="signup-user_confirmpass" value="" required>
+        <input type="password" name="signup-user_confirmpass" required >
         <label>Re-enter your password</label>
       </div>
       <button style="width: 300px;" type="submit">Sign Up</button>
-      <div class="register">
-        <p>Do you have an account? <a href="{% url 'auth_form_in' %}">signIn</a></p>
-      </div>
     </form>
+      <div class="register" style="margin : 10px 0;" >
+        <p style="color : white;"  >Do you have an account? <a style="color : white;"  href="{% url 'auth_form_in' %}">signIn</a></p>
+      </div>
   </div>
 </section>

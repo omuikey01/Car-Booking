@@ -14,6 +14,7 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   background-color: #000;
 }
+forget
 
 .form-container .signup {
   display: flex;
@@ -134,15 +135,15 @@
 }
 
 .form-container .signup .forget {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 25px 0 35px 0;
+  width: 100%;
+  text-align: end;
+  /* margin: 25px 0 35px 0; */
   color: #fff;
 }
 
 #remember {
   accent-color: #fff;
+  text-align: end;
 }
 
 .form-container .signup .forget label {
