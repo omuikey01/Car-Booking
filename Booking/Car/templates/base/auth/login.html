@@ -1,9 +1,9 @@
 <section>
   <div class="form-container">
-    <form class="signup" action="{% url 'loginform' %}" method="post" >
+    <form class="signup" action="{% url 'loginform' %}" method="post">
       {% csrf_token %}
       <h2>SignIn</h2>
-      <h1 style="color : white;" > {{error}} </h1> 
+      <h1 style="color : white;"> {{error}} </h1>
       <div class="input-field">
         <input type="text" name="signin-user_email" value="" required>
         <label>Enter your email</label>

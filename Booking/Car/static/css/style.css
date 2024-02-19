@@ -13,6 +13,10 @@
     text-decoration: none;
 }
 
+a {
+    color: #fff;
+}
+
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -27,6 +31,7 @@ button {
     width: 100px;
     border: 1px solid;
     font-size: 18px;
+    cursor: pointer;
 }
 
 label {

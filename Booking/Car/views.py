@@ -5,10 +5,6 @@ from .models import *
 
 # Create your views here.
 
-loginfailcount = 0
-
-
-
 def homepage(request):
     return render(request, "base/index/index.html")
 
@@ -93,29 +89,32 @@ def loginform(request):
         password = request.POST['signin-user_pass']
         auto = request.POST['checkbox']
         if auto == "Client" :
-            if loginfailcount <= 5 :
-                try:
-                    user = RegisterUser.objects.get(user_email = email)
-                    if user.user_email == email and user.user_pass == password :
-                        return render(request, "client/desh.html")
-                    else :
-                        loginfailcount+1
-                        return render(request, "base/index/auth.html", {"any_one" : "in","error" : " Invalid username or password "})
-                except :
-                        return render(request, "base/index/auth.html", {"any_one" : "up","error" : "User have't register please, do it"})
-            else :
-                print(" You have hit more then 5 times please Register your self ")
-                return render(request, "base/index/auth.html", {"any_one" : "up","error" : "You have hit more then 5 times please Register your self"})
+            try:
+                user = RegisterUser.objects.get(user_email = email)
+                if user.user_email == email and user.user_pass == password :
+                    request.session['user_id'] = user.id
+                    return render(request, "client/desh.html")
+                else :
+                  
+                    return render(request, "base/index/auth.html", {"any_one" : "in","error" : " Invalid username or password "})
+            except :
+                    return render(request, "base/index/auth.html", {"any_one" : "up","error" : "User have't register please, do it"})  
         else :
             try:
-                user = RegisterDealer.objects.get(dealer_email = email)
-                if user.dealer_email == email and user.dealer_pass == password :
+                dealer = RegisterDealer.objects.get(dealer_email = email)
+                if dealer.dealer_email == email and dealer.dealer_pass == password :
+                    request.session['dealer_id'] = dealer.id
                     return render(request, "dealer/desh.html")
                 else :
-                    loginfailcount+1
                     return render(request, "base/index/auth.html", {"any_one" : "in","error" : "Invalid username or password"})
             except :
                     return render(request, "base/index/auth.html", {"any_one" : "up","error" : "User have't register please, do it"})
     else :
-        return render(request, "base/index/auth.html", {"any_one" : "in"})
-
+        try :
+           id = request.session.get("dealer_id")
+           return render(request, "dealer/desh.html")
+        except :
+            id = request.session.get("user_id")
+            return render(request, "client/desh.html")
+        else :
+            return render(request, "base/index/auth.html", {"any_one" : "in"})
