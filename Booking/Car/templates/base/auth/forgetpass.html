@@ -1,12 +1,75 @@
-{% extends "base/index/base.html" %}
-
-
-{% block Data %}
+{% extends "base/index/base.html" %} {% block Data %}
 
 <section class="forgot_pass-section">
-    <div class="forgot-pass">
-       <h1> Forgot Password </h1>
+  <div class="forgot-pass">
+    <!-- email confirmation section start -->
+
+    <div class="email_section">
+      <h1>Forgot Password</h1>
+      <p>Enter your email address for OTP</p>
+      <form action="#">
+        <div class="input-box">
+          <input
+            type="text"
+            name="verify_email"
+            value=""
+            placeholder="Enter email address"
+            required
+          />
+        </div>
+
+        <button>Send OTP</button>
+      </form>
     </div>
+
+    <!-- email confirmation page end -->
+
+    <!-- otp form start -->
+
+    <div class="otp_section">
+      <h1>Enter Your OTP</h1>
+      <form action="#">
+        <div class="input-box">
+          <input
+            type="text"
+            name="otp"
+            value=""
+            placeholder="Enter OTP"
+            required
+          />
+        </div>
+
+        <div class="otp_btngrp">
+          <button>Verify OTP</button>
+          <button>Resend OTP</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- otp form end -->
+
+    <!-- new password form start -->
+
+    <div class="newpass_section">
+      <h1>New Password</h1>
+      <div class="newpass_p">
+        <p>Please create a new password that you don't use an any other site</p>
+      </div>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" name="newpass_making" value="" placeholder="Create new password" required />
+        </div>
+
+        <div class="input-box">
+          <input type="search" name="newpass_confirm" value="" placeholder="Confirm your password" required />  
+        </div>
+
+        <button>Change</button>
+      </form>
+    </div>
+
+    <!-- new password form end -->
+  </div>
 </section>
 
 {% endblock %}
