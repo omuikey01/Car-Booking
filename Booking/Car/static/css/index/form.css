@@ -81,4 +81,31 @@
     gap: 10px;
   }
 
+  .user-box {
+    margin-top: 20px;
+  }
+
+  .forgot-pass .email_section :where(.user-option, .user) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .forgot-pass .email_section .user {
+    column-gap: 5px;
+  }
+  
+  .forgot-pass .email_section .user input {
+    accent-color: rgb(130, 106, 251);
+  }
+  
+  .forgot-pass .email_section :where(.user input, .user label) {
+    cursor: pointer;
+  }
+  
+  .user label {
+    color: #333;
+  }
+
   
