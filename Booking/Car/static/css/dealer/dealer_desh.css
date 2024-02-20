@@ -1,3 +1,30 @@
 .dealer-desh {
-    margin-top: 100px;
+    margin-top: 55px;
+}
+.dealer-desh-content {
+    height: 100vh;
+    background-color: yellow;
+}
+
+.dealer-desh-content .left {
+    background-color: White;
+    min-height: 100vh;
+    width: 180px;
+    color: #000;
+    padding-left:15px;
+    padding-top:20px;
+    font-size: 15px;
+}
+.dealer-desh-menu {
+    margin-top: 20px;
+    font-size: 20px;
+}
+.inside-menu {
+    padding-left: 30px;
+    line-height: 30px;
+    display: none;
+}
+
+.dealer-desh-content .right {
+    padding-bottom: 20px;
 }

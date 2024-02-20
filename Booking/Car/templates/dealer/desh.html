@@ -1,9 +1,48 @@
 {% extends "base/index/base.html" %}
 
 {% block Data %}
-<section class="dealer-desh" >
-    <div >
-        <h1> Dealer Deshboard  Del </h1>
+<section class="dealer-desh">
+    <div class="dealer-desh-content">
+        <div class="flex dealer-desh-data" style="height: 100%;">
+            <div class="left">
+                <h1> UIKEY </h1>
+                <div class="dealer-desh-menu">
+                    <ul>
+                        <li id="menu-product"> Product
+                            <ul class="inside-menu" id="menu-product-data">
+                                <li> Show </li>
+                                <li> Add </li>
+                                <li> Most Booked </li>
+                                <li> For Aaj </li>
+                                <li> For Kal </li>
+                                <li> Running </li>
+                            </ul>
+                        </li>
+                        <li id="menu-user"> User
+                            <ul class="inside-menu" id="menu-user-data">
+                                <li> Most Booked </li>
+                            </ul>
+                        </li>
+                        <li id="menu-payment"> Payment
+                            <ul class="inside-menu" id="menu-payment-data">
+                                <li> Total Earning </li>
+                                <li> Growth Chart </li>
+                                <li> History </li>
+                            </ul>
+                        </li>
+                        <li id="menu-account"> Account
+                            <ul class="inside-menu" id="menu-account-data">
+                                <li> Profile </li>
+                                <li> Password </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="right"> Content </div>
+        </div>
     </div>
 </section>
 {% endblock %}

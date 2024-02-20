@@ -2,9 +2,10 @@
 <section>
   <div class="nav-component flex">
     <input type="checkbox" id="check" />
-    
     <div class="nav-left">
-      <img src="{% static 'images/logo/nav_logo.png' %}" alt="Logo" />
+      <a href="{% url '' %}">
+        <img src="{% static 'images/logo/nav_logo.png' %}" alt="Logo" />
+      </a>
     </div>
     <div class="nav-right flex">
       <div>
@@ -13,10 +14,10 @@
         <a href="#footer">Contact</a>
       </div>
       <div class="nav-right-btns">
-        <form action="{% url 'auth' %}" method="post" >
+        <form action="{% url 'auth' %}" method="post">
           {% csrf_token %}
-          <button name="autu_btn" value="in" >Signin</button>
-         <button name="autu_btn" value="up" >Signup</button>
+          <button name="autu_btn" value="in">Signin</button>
+          <button name="autu_btn" value="up">Signup</button>
         </form>
       </div>
     </div>
