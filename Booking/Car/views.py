@@ -46,13 +46,42 @@ def auth_form_in(request):
     return render(request, "base/index/auth.html", {"any_one" : "in"})
 
 def forgotpass(request):
-    return render(request, "base/auth/forgetpass.html", {"forgot" : "email"})   
-
-def forgotpass_otp(request):
-    return render(request, "base/auth/forgetpass.html", {"forgot" : "otp"})   
-
-def forgotpass_newpass(request):
-    return render(request, "base/auth/forgetpass.html", {"forgot" : "newpass"})   
+    try:
+        email = request.POST['verify_email']
+        check = request.POST['checkbox']
+        print(email)
+        print(check)
+        if check == "Client":
+            user = RegisterUser.objects.filter(user_email = email)
+            print(user)
+            if user :
+                pass
+            else :
+                return render(request, "base/auth/forgetpass.html", {"forgot" : "pass_email", "msg" : "Email not Exists"})
+        else :
+            dealer = RegisterDealer.objects.filter(dealer_email = email)
+            print(dealer)
+            if dealer :
+                pass
+            else :
+                return render(request, "base/auth/forgetpass.html", {"forgot" : "pass_email", "msg" : "Email not Exists"})
+            
+        return render(request, "base/auth/forgetpass.html", {"forgot" : "pass_otp"})
+    except:
+        try :
+            opt = request.POST['otp']
+            return render(request, "base/auth/forgetpass.html", {"forgot" : "newpass"})   
+        except :
+            try:
+                pass1 = request.POST['newpass_making']
+                pass2 = request.POST['newpass_confirm']
+                if pass1 == pass2:
+                    return render(request, "base/index/auth.html", {"any_one" : "in", "error" : "login with new password "})
+                else:
+                    return render(request, "base/auth/forgetpass.html", {"forgot" : "newpass", "msg" : "Password not match "})
+            except:
+                return render(request, "base/auth/forgetpass.html", {"forgot" : "pass_email"})   
+              
 
 def registerform(request):
     if request.method == "POST":
