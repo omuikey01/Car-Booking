@@ -46,7 +46,13 @@ def auth_form_in(request):
     return render(request, "base/index/auth.html", {"any_one" : "in"})
 
 def forgotpass(request):
-    return render(request, "base/auth/forgetpass.html")   
+    return render(request, "base/auth/forgetpass.html", {"forgot" : "email"})   
+
+def forgotpass_otp(request):
+    return render(request, "base/auth/forgetpass.html", {"forgot" : "otp"})   
+
+def forgotpass_newpass(request):
+    return render(request, "base/auth/forgetpass.html", {"forgot" : "newpass"})   
 
 def registerform(request):
     if request.method == "POST":

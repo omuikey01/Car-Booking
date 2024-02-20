@@ -3,11 +3,13 @@
 <section class="forgot_pass-section">
   <div class="forgot-pass">
     <!-- email confirmation section start -->
+    {% if forgot == 'email' %}
 
     <div class="email_section">
       <h1>Forgot Password</h1>
       <p>Enter your email address for OTP</p>
-      <form action="#">
+      <form action="#" method="post">
+        {% csrf_token %}
         <div class="input-box">
           <input
             type="text"
@@ -31,17 +33,21 @@
             </div>
           </div>
 
-        <button>Send OTP</button>
+          <a href="{% url 'forgotpass_otp' %}"><button>Send OTP</button></a>
+        
       </form>
     </div>
+    {% endif %}
 
     <!-- email confirmation page end -->
 
     <!-- otp form start -->
+    {% if forgot == 'otp' %}
 
     <div class="otp_section">
       <h1>Enter Your OTP</h1>
-      <form action="#">
+      <form action="#" method="post">
+        {% csrf_token %}
         <div class="input-box">
           <input
             type="text"
@@ -58,17 +64,20 @@
         </div>
       </form>
     </div>
+    {% endif %}
 
     <!-- otp form end -->
 
     <!-- new password form start -->
+    {% if forgot == 'newpass' %}
 
     <div class="newpass_section">
       <h1>New Password</h1>
       <div class="newpass_p">
         <p>Please create a new password that you don't use an any other site</p>
       </div>
-      <form action="#">
+      <form action="#" method="post">
+        {% csrf_token %}
         <div class="input-box">
           <input type="text" name="newpass_making" value="" placeholder="Create new password" required />
         </div>
@@ -80,6 +89,7 @@
         <button>Change</button>
       </form>
     </div>
+    {% endif %}
 
     <!-- new password form end -->
   </div>
