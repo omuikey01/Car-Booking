@@ -147,9 +147,25 @@ def loginform(request):
     else :
         try :
            id = request.session.get("dealer_id")
-           return render(request, "dealer/desh.html")
+           return render(request, "dealer/desh.html", {"user_num" : 1})
         except :
             id = request.session.get("user_id")
             return render(request, "client/desh.html")
         else :
             return render(request, "base/index/auth.html", {"any_one" : "in"})
+        
+
+def insidedeshmenubar(request):
+    if request.method == "POST" :
+        name = request.POST['menu_name']
+        if name == "show":
+            return render(request, "dealer/all_products.html")
+    
+    
+    id = request.session.get("dealer_id")
+    return render(request, "dealer/desh.html")
+
+
+
+def insideslide(request):
+    return render(request, "dealer/product_detail.html", {"insideif" : "open"})
