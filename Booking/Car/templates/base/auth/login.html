@@ -16,17 +16,19 @@
         <div class="user-option">
           <div class="user">
             <input style="width: 20px;" type="radio" id="check-client" name="checkbox" value="Client" checked />
-            <label for="check-client">Client</label>
+            <label style="color: white;" for="check-client">Client</label>
           </div>
           <div class="user">
             <input style="width: 20px;" type="radio" id="check-dealer" name="checkbox" value="Dealer" />
-            <label for="check-dealer">Dealer</label>
+            <label style="color: white;" for="check-dealer">Dealer</label>
+          </div>
+
+          <div class="forget">
+            <a href="{% url 'forgotpass' %}">Forgot password?</a>
           </div>
         </div>
       </div>
-      <div class="forget">
-        <a href="{% url 'forgotpass' %}">Forgot password?</a>
-      </div>
+     
       <button style="width: 300px;" type="submit">Sign In</button>
     </form>
     <div class="register" style="margin : 10px 0;">
