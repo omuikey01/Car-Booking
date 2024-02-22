@@ -5,6 +5,8 @@
   <div>
     <div class="cards">
       <div>
+
+
         <div class="card flex">
           <div class="car-images all_data-data-container">
             <img src="{% static 'images/car1.jpg' %}" alt="" />
@@ -36,8 +38,11 @@
             </div>
           </div>
         </div>
+
+
+
         <div style="text-align: center">
-          <button class="bookbtn">Book Now</button>
+         <a href="{% url 'book-now' %}"><button class="bookbtn" value="">Book Now</button></a> 
         </div>
       </div>
 
@@ -76,7 +81,7 @@
           </div>
         </div>
         <div style="text-align: center">
-          <button class="bookbtn">Book Now</button>
+          <a href="{% url 'book-now' %}"><button class="bookbtn" value="">Book Now</button></a> 
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 {% load static %}
 {% comment %} {% block Data %} {% endcomment %}
- <section class="footer-section" id="footer" >
-    <div class="footer-parent flex " style="justify-content: space-around;"  >
-        <div class="footer-left" >
+<section class="footer-section" id="footer">
+    <div class="footer-parent flex " style="justify-content: space-around;">
+        <div class="footer-left">
             <div>
                 <h1>Get In Touch</h1>
             </div>
@@ -11,35 +11,46 @@
             </div>
             <div>
                 <p>Call us at </p>
-                <p> +91 8817897257 </p>
+                <p>
+                    <a style="color: black;" href="tel:+91 8817897257">+91 8817897257<a>
+                </p>
             </div>
-            <div>
+            <div style="color: black;" >
                 <p>Email us at </p>
                 <p> Support@gmail.com </p>
             </div>
-            <div class="footer-left-links" >
-                <a href="https://github.com/omuikey01" target="_blank"  > <img src="{% static 'images/logo/github.png' %}" alt="github"> </a>
-                <a href="https://www.linkedin.com/in/omuikey01/" target="_blank"   > <img src="{% static 'images/logo/linkedin.png' %}" alt="Linkdin"> </a>
-                <a href="https://www.instagram.com/omm_uikey_01/" target="_blank" > <img src="{% static 'images/logo/instagram.png' %}" alt="Instagram"> </a>
+            <div class="footer-left-links">
+                <a href="https://github.com/omuikey01" target="_blank">
+                    <img src="{% static 'images/logo/github.png' %}" alt="github">
+                </a>
+                <a href="https://www.linkedin.com/in/omuikey01/" target="_blank">
+                    <img src="{% static 'images/logo/linkedin.png' %}" alt="Linkdin">
+                </a>
+                <a href="https://www.instagram.com/omm_uikey_01/" target="_blank">
+                    <img src="{% static 'images/logo/instagram.png' %}" alt="Instagram"> </a>
+                <a href="mailto:uikeyom1234@gmail.com" target="_blank">
+                    <img src="{% static 'images/logo/gmail.png' %}" alt="Instagram">
+                </a>
             </div>
         </div>
-        <div class="footer-right" >
+        <div class="footer-right">
             <form>
                 <div>
                     <label for=""> Name </label>
-                    <input type="text" placeholder="Enter your name" name="name" >
+                    <input type="text" placeholder="Enter your name" name="name">
                 </div>
                 <div>
                     <label for=""> Email </label>
-                    <input type="text" placeholder="Enter your email" name="email" >
+                    <input type="text" placeholder="Enter your email" name="email">
                 </div>
                 <div>
                     <label for=""> Phone </label>
-                    <input type="text" placeholder="Enter your phone number" name="phone" >
+                    <input type="text" placeholder="Enter your phone number" name="phone">
                 </div>
                 <div>
                     <label for=""> Your Message </label>
-                    <textarea name="message" id="" cols="40" rows="8" placeholder="Tell us your thoughts and feelings..." ></textarea>
+                    <textarea name="message" id="" cols="40" rows="8"
+                        placeholder="Tell us your thoughts and feelings..."></textarea>
                 </div>
                 <div>
                     <button> Submit </button>

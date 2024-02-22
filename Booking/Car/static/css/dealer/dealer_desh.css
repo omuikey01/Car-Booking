@@ -1,8 +1,9 @@
 .dealer-desh {
     margin-top: 55px;
 }
+
 .dealer-desh-content {
-    height: 100vh;
+    /* height: 100vh; */
     background-color: yellow;
 }
 
@@ -11,20 +12,110 @@
     min-height: 100vh;
     width: 180px;
     color: #000;
-    padding-left:15px;
-    padding-top:20px;
+    padding-left: 15px;
+    padding-top: 20px;
     font-size: 15px;
 }
+
 .dealer-desh-menu {
     margin-top: 20px;
     font-size: 20px;
+    cursor: pointer;
 }
+
+.dealer-desh-menu button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
 .inside-menu {
-    padding-left: 30px;
+    padding-left: 10px;
     line-height: 30px;
     display: none;
 }
 
+.deshboard-data {
+    justify-content: space-between;
+}
+
 .dealer-desh-content .right {
-    padding-bottom: 20px;
+    padding: 20px;
+    width: calc(100vw - 250px);
+}
+
+.logoutwithnotification {
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+.logoutwithnotification a {
+    color: #000;
+
+}
+
+.notification {
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    padding: 15px 26px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.notification span {
+    color: white;
+}
+
+.notification:hover {
+    background: red;
+}
+
+.notification .badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+}
+
+
+.deshboard-data .desh-cards {
+    flex-wrap: wrap;
+}
+
+.deshboard-data .card {
+    width: 280px;
+    background-color: aliceblue;
+    color: #000;
+    padding: 20px 10px;
+    margin: 20px;
+    display: flex;
+}
+
+.deshboard-data .card .date {
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.deshboard-data .card a {
+    color: #000;
+}
+.deshboard-data .card-icons img{
+    width: 50px;
+}
+
+.deshboard-data .slidedeshdata {
+    margin-top: 30px;
+}
+.deshboard-data .page-cancel-img {
+    text-align: end;
+    border: 2px solid;
+}
+.deshboard-data .page-cancel-img a img {
+    width: 50px;
 }

@@ -1,47 +1,183 @@
 {% extends "base/index/base.html" %}
 
+{% load static %}
+
 {% block Data %}
 <section class="dealer-desh">
     <div class="dealer-desh-content">
         <div class="flex dealer-desh-data" style="height: 100%;">
+           
+           
             <div class="left">
-                <h1> UIKEY </h1>
+                <h1> <a style="color : black;" href="{% url 'insidedeshmenubar' %}">UIKEY</a></h1>
                 <div class="dealer-desh-menu">
-                    <ul>
-                        <li id="menu-product"> Product
-                            <ul class="inside-menu" id="menu-product-data">
-                                <li> Show </li>
-                                <li> Add </li>
-                                <li> Most Booked </li>
-                                <li> For Aaj </li>
-                                <li> For Kal </li>
-                                <li> Running </li>
-                            </ul>
-                        </li>
-                        <li id="menu-user"> User
-                            <ul class="inside-menu" id="menu-user-data">
-                                <li> Most Booked </li>
-                            </ul>
-                        </li>
-                        <li id="menu-payment"> Payment
-                            <ul class="inside-menu" id="menu-payment-data">
-                                <li> Total Earning </li>
-                                <li> Growth Chart </li>
-                                <li> History </li>
-                            </ul>
-                        </li>
-                        <li id="menu-account"> Account
-                            <ul class="inside-menu" id="menu-account-data">
-                                <li> Profile </li>
-                                <li> Password </li>
-                            </ul>
-                        </li>
-                    </ul>
+
+                    <form action="{% url 'insidedeshmenubar' %}" method="post">
+                        {% csrf_token %}
+                        <ul>
+                            <div>
+                                <li id="menu-product"> Product
+                                </li>
+                                <ul class="inside-menu" id="menu-product-data">
+                                    <li> <button name="menu_name" value="show"> Show </button> </li>
+                                    <li> <button name="menu_name" value="add"> Add </button> </li>
+                                    <li> <button name="menu_name" value="most_booked"> Most Booked  </button> </li>
+                                    <li> <button name="menu_name" value="for_aaj"> For Aaj  </button> </li>
+                                    <li> <button name="menu_name" value="for_kal"> For kal  </button> </li>
+                                    <li> <button name="menu_name" value="Running"> Running  </button> </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <li id="menu-user"> User
+                                </li>
+                                <ul class="inside-menu" id="menu-user-data">
+                                    <li> Most Booked </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <li id="menu-payment"> Payment
+                                </li>
+                                <ul class="inside-menu" id="menu-payment-data">
+                                    <li> Total Earning </li>
+                                    <li> Growth Chart </li>
+                                    <li> History </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <li id="menu-account"> Account
+                                </li>
+                                <ul class="inside-menu" id="menu-account-data">
+                                    <li> Profile </li>
+                                    <li> Password </li>
+                                </ul>
+                            </div>
+
+                        </ul>
+
+                    </form>
                 </div>
             </div>
 
+            <div class="right">
+                <section class="logoutwithnotification flex">
+                    <a href="#" class="notification">
+                        <span>Inbox</span>
+                        <span class="badge">3</span>
+                    </a>
+                    <span>Name</span>
+                    <a href="#">Logout</a>
+                </section>
 
-            <div class="right"> Content </div>
+
+                {% block InsideDashboard %}
+                
+                <section class="deshboard-data flex">
+                    <section>
+                        <div class="desh-cards flex" {% if insideif %} style="width: 650px; background-color: red;" {% endif %}>
+
+                            <div class="card">
+                                <div>
+                                    <div class="date">
+                                        <span> 12-01-2024 </span>
+                                    </div>
+                                    <h1> For Aaj </h1>
+                                    <h1> Number of Booked </h1>
+                                    <a href="{% url 'insideslide' %}">View All </a>
+                                </div>
+                                <div class="card-icons">
+
+                                    <img src="{% static '/images/logo/taxi-app.png' %}" alt="Pic 1">
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div>
+                                    <div class="date">
+                                        <span> 12-01-2024 </span>
+                                    </div>
+                                    <h1> For Kal </h1>
+                                    <h1> Number of Booked </h1>
+                                    <a href="{% url 'insideslide' %}">View All </a>
+                                </div>
+                                <div class="card-icons">
+                                    <img src="{% static '/images/logo/schedule.png' %}" alt="Pic 1">
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div>
+                                    <h1> Permanent {% if user_num > 1 %} Users {% else %} User {% endif %} </h1>
+                                    <h1> {{user_num}} </h1>
+                                    <a href="{% url 'insideslide' %}">View User</a>
+                                </div>
+                                <div class="card-icons">
+                                    <img src="{% static '/images/logo/user.png' %}" alt="Pic 1">
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div>
+                                    <div class="date">
+                                        <span> 12-01-2024 </span> To <span> 21-02-2024 </span>
+                                    </div>
+                                    <h1> Earning </h1>
+                                    <h1> 5000 </h1>
+                                    <a href="{% url 'insideslide' %}">Received</a>
+                                </div>
+                                <div class="card-icons">
+
+                                    <img src="{% static '/images/logo/money.png' %}" alt="Pic 1">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <h1> Total Product </h1>
+                                    <h1> 5 </h1>
+                                    <a href="{% url 'insideslide' %}">List</a>
+                                </div>
+                                <div class="card-icons">
+
+                                    <img src="{% static '/images/logo/75678.png' %}" alt="Pic 1">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <h1> Running book product </h1>
+                                    <h1> 2 </h1>
+                                    <a href="{% url 'insideslide' %}"> List </a>
+                                </div>
+                                <div class="card-icons">
+                                    <img src="{% static '/images/logo/car-sharing.png' %}" alt="Pic 1">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    {% if insideif %}
+                    <section style="width: 300px;" class="slidedeshdata">
+                        <div class="page-cancel-img">
+                            <a style="color : black;" href="{% url 'insidedeshmenubar' %}">
+                                <img src="{% static '/images/paper.png' %}" alt="Cancel Page">
+                            </a>
+                        </div>
+                        {% block SlideData %}
+
+
+                        {% endblock %}
+                    </section>
+                    {% endif %}
+                </section>
+
+
+                {% endblock %}
+            </div>
+
+
+
         </div>
     </div>
 </section>
