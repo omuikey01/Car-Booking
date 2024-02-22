@@ -3,21 +3,62 @@
 {% block Data %}
 
     <section>
-        <div>
-            <h1>Book Your Car</h1>
-            <form action="">
-                <div>
-                    <input type="text" value="">
-                    <label for="">Name</label>
-                </div>
-            </form>
+        <div class="payment">
+            <div class="payment_ride">
 
-            
-            
-        </div>
-    </section>
-    
-    {% endblock  %}
+                <h2>Book Your Car</h2>
+                <div class="label-box">
+                    <label for="">Car Name: <span>BMW</span></label>
+                    <label for="">Car Color: <span>Audi</span>                    </label>
+                </div>
+                
+                <div class="your-way">
+                    <div class="way-option">
+                        <div class="way">
+                            <input style="width: 20px;" type="radio" id="check-one_way" name="way" checked />
+                        <label for="check-one_way">One Way</label>
+                      </div>
+                      <div class="way">
+                          <input style="width: 20px;" type="radio" id="check-two_way" name="way" />
+                          <label for="check-two_way">Two Way</label>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="ride_details">
+                    <div class="details flex">
+                        <p>KM: </p>
+                        <span>20km</span>
+                    </div>
+                    <div class="details flex">
+                        <p>Total Amount: </p>
+                        <span>100Rs</span>
+                    </div>
+                    <div class="details flex">
+                        <p>Discount: </p>
+                        <span>10Rs</span>
+                    </div>
+                    <div class="details flex">
+                        <p>Discount %: </p>
+                        <span>10</span>
+                    </div>
+                    <div class="details flex">
+                        <p>Payable Amount: </p>
+                        <span>81 Rs</span>
+                    </div>
+                </div>
+                
+
+                  <button>Payment Now</button>
+                </div>
+                
+                
+            </div>
+                
+            </div>
+        </section>
+        
+        {% endblock  %}
     <!-- <div>
         <h1> Book Page </h1>
         <a href="{% url 'payment-done' %}"> <button> Pay Now </button> </a>

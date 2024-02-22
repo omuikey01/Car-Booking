@@ -1,5 +1,105 @@
-.section{
-    top: 12px;
-    background-color: aqua;
+
+
+.flex{
+    display: flex;
+  }
+
+
+.payment_ride{
+    width: 400px;
+    margin: auto;
+    padding: 25px;
+    margin-top: 100px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .payment_ride h2 {
+    font-size: 1.5rem;
+    /* color: #333; */
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .payment_ride .label-box {
     width: 100%;
-}
+    margin-top: 10px;
+  }
+
+  .payment_ride .label-box label {
+    color: #333;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .payment_ride .label-box label span{
+    font-size: 16px;
+  }
+  
+
+  .payment_ride button{
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /* background: rgb(130, 106, 251); */
+    background: #544296;
+  }
+
+  .payment_ride button:hover {
+    background: rgb(88, 56, 250);
+  }
+
+  .payment_ride .your-way .way-option{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .payment_ride :where(.way-option, .way) {
+    display: flex;
+    align-items: center;
+    column-gap: 150px;
+    flex-wrap: wrap;
+    /* padding-left: 40px; */
+  }
+
+  .payment_ride .way {
+    column-gap: 5px;
+  }
+  
+  .payment_ride .way input {
+    accent-color: rgb(130, 106, 251);
+  }
+  
+  .payment_ride :where(.way input, .way label) {
+    cursor: pointer;
+  }
+  
+  .way label {
+    color: #333;
+  }
+
+  .ride_details{
+    margin-top: 20px;
+  }
+  .ride_details p{
+    color: #333;
+  }
+  .ride_details p span{
+    color: #333;
+    text-align: right;
+  }
+
+  .details{
+    justify-content: space-between;
+  }
+  
+  
