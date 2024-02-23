@@ -2,4 +2,12 @@
 
 {% block InsideDashboard %}
     <h1> Insert Page  </h1>
+
+    <form action="{% url 'productsave'  %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{productaddform}}
+
+        <button> Upload </button>
+
+    </form>
 {% endblock  %}

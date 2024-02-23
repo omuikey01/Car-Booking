@@ -19,5 +19,5 @@ urlpatterns = [
     path("loginform/", loginform, name="loginform"),
     path("insidedeshmenubar/", insidedeshmenubar, name="insidedeshmenubar"),
     path("insideslide/", insideslide, name="insideslide"),
-
+    path("productsave/", productsave, name="productsave"),
 ]

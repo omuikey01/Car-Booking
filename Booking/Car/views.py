@@ -2,9 +2,11 @@ from django.shortcuts import render
 import datetime
 from datetime import time
 from .models import *
+from .forms import *
 
 # Create your views here.
-
+imageform = ImagesForm()
+productaddform = ProductAddForm()
 def homepage(request):
     return render(request, "base/index/index.html")
 
@@ -82,7 +84,6 @@ def forgotpass(request):
             except:
                 return render(request, "base/auth/forgetpass.html", {"forgot" : "pass_email"})   
               
-
 def registerform(request):
     if request.method == "POST":
         name = request.POST['signup-user_name']
@@ -161,11 +162,9 @@ def insidedeshmenubar(request):
         if name == "show":
             return render(request, "dealer/all_products.html")
         elif name == 'add' :
-            return render (request, "dealer/product_insert.html")
+            return render (request, "dealer/product_insert.html", {"productaddform" : productaddform})
         elif name=='most_booked' :
             return render(request,  "dealer/most_booked_product.html")
-    
-    
     id = request.session.get("dealer_id")
     return render(request, "dealer/desh.html")
 
@@ -173,3 +172,15 @@ def insidedeshmenubar(request):
 
 def insideslide(request):
     return render(request, "dealer/product_detail.html", {"insideif" : "open"})
+
+def productsave(request):
+    if request.method == 'POST':
+        id = request.session.get("dealer_id")
+        deal_id = ProductAdd(dealer_id=id)
+        form = ProductAddForm(request.POST, request.FILES, instance=deal_id)
+        if form.is_valid():
+            form.save()
+            return render(request, "dealer/desh.html")
+        else :
+            return render (request, "dealer/product_insert.html", {"productaddform" : productaddform})
+    return render (request, "dealer/product_insert.html", {"productaddform" : productaddform})
