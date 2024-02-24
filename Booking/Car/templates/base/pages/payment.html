@@ -5,11 +5,21 @@
     <section>
         <div class="payment">
             <div class="payment_ride">
+                <div class="payment_ride-heading">
 
-                <h2>Book Your Car</h2>
+                    <h2>Book Your Car</h2>
+                </div>
                 <div class="label-box">
-                    <label for="">Car Name: <span>BMW</span></label>
-                    <label for="">Car Color: <span>Audi</span>                    </label>
+                    <div>
+
+                        <label for="">Car Name:</label>
+                        <span>BMW</span>
+                    </div>
+                    <div>
+
+                        <label for="">Car Color:</label>
+                        <span>Audi</span>
+                    </div>
                 </div>
                 
                 <div class="your-way">
@@ -30,18 +40,22 @@
                         <p>KM: </p>
                         <span>20km</span>
                     </div>
+                    <br>
                     <div class="details flex">
                         <p>Total Amount: </p>
                         <span>100Rs</span>
                     </div>
+                    <br>
                     <div class="details flex">
                         <p>Discount: </p>
                         <span>10Rs</span>
                     </div>
+                    <br>
                     <div class="details flex">
                         <p>Discount %: </p>
                         <span>10</span>
                     </div>
+                    <br>
                     <div class="details flex">
                         <p>Payable Amount: </p>
                         <span>81 Rs</span>
@@ -49,7 +63,8 @@
                 </div>
                 
 
-                  <button>Payment Now</button>
+                  <!-- <button>Payment Now</button> -->
+                  <a href="{% url 'payment-done' %}"> <button> Pay Now </button> </a>
                 </div>
                 
                 

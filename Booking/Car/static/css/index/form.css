@@ -1,18 +1,15 @@
-<<<<<<< HEAD
-=======
 .forgot-pass {
    
 }
 
 
 
->>>>>>> 7e8f356b26034d2c10918225370adcc6982a433d
 .forgot-pass .email_section, .otp_section, .newpass_section {
     width: 400px;
     margin: auto;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
   }
 
   .forgot-pass h1 {

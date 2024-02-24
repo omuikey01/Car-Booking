@@ -1,0 +1,82 @@
+
+
+.dealer-product_insert form{
+    max-width: 525px;
+    margin: auto;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 8px;
+    gap: 20px;
+    background-color: #ffffffe0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .dealer-product_insert h1 {
+    font-size: 1.5rem;
+    color: #333;
+    /* color: #000; */
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .dealer-product_insert form .dealer-product_insert-data {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .dealer-product_insert-data{
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+
+  .dealer-product_insert form label {
+    color: #333;
+    font-size: 18px;
+    /* padding: 5px; */
+  }
+
+  .dealer-product_insert form input {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 5px 15px;
+    
+  }
+
+
+  .dealer-product_insert form input[type=file]{
+    color: red;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+
+
+  .dealer-product_insert form button{
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /* background: rgb(130, 106, 251); */
+    background: #544296;
+  }
+
+  .dealer-product_insert form button:hover {
+    background: rgb(88, 56, 250);
+  }

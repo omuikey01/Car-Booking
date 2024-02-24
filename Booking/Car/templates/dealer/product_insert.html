@@ -1,13 +1,19 @@
 {% extends "./desh.html" %}
 
 {% block InsideDashboard %}
-    <h1> Insert Page  </h1>
 
-    <form action="{% url 'productsave'  %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{productaddform}}
-
-        <button> Upload </button>
-
-    </form>
+<section>
+    <div class="dealer-product_insert">
+        <form  action="{% url 'productsave'  %}" method="post" enctype="multipart/form-data">
+                <h1> Insert Page  </h1>
+            {% csrf_token %}
+            <div class="dealer-product_insert-data">
+                {{productaddform}}
+            </div>
+            
+            <button> Upload </button>
+            
+        </form>
+    </div>
+    </section>
 {% endblock  %}
